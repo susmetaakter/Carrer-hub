@@ -1,0 +1,25 @@
+[
+  {   "id": 1,
+      "logo": "https://via.placeholder.com/50",
+      "name": "Engineering",
+      "jobs_available": 56
+  },
+  {    
+    "id": 2,
+    "logo": "https://via.placeholder.com/50",
+    "name": "Design",
+    "jobs_available": 23
+  },
+  { 
+    "id": 3,
+    "logo": "https://via.placeholder.com/50",
+    "name": "Marketing",
+    "jobs_available": 37 
+  },  
+  {  
+    "id": 4, 
+    "logo": "https://via.placeholder.com/50",  
+    "name": "Sales", 
+    "jobs_available": 42
+  }
+]
