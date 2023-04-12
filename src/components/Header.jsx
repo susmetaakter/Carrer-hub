@@ -24,12 +24,13 @@ const Header = () => {
 
     return (
         <div>
-            <div className="flex flex-col lg:flex-row justify-between py-4 px-4 lg:px-8 xl:px-16">
+            <div className="flex flex-col lg:flex-row justify-between py-4 px-4 lg:px-8 xl:px-16  bg-indigo-50">
       <div>
-        <h1 className="text-4xl font-bold">One Step <br /> Closer To Your <br /> Dream Job</h1>
-        <p>Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all <br /> your job application from start to finish.</p>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 lg:py-2 lg:px-4 rounded">
-          Button
+        <h1 className="text-4xl font-bold mt-4">One Step <br /> Closer To Your <br />
+        <span className=' text-blue-400'> Dream Job</span></h1>
+        <p className='mt-4 text-gray-500'>Explore thousands of job opportunities with all the <br /> information you need. Its your future. Come find it. Manage all your job application from start to finish.</p>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-3 lg:py-2 lg:px-4 rounded mt-4">
+        Get Started
         </button>
       </div>
       <div className="flex justify-center lg:justify-end">
@@ -54,7 +55,7 @@ const Header = () => {
             <div className='grid gap-6 -mb-1 lg:grid-cols-2 sm:grid-cols-1 py-4 px-4 lg:px-8 xl:px-16'>
               {
                 features.map(feature => <Feature 
-                key = {feature.button.id}  
+                key = {feature.id}  
                 feature = {feature}
                 />)
                 } 

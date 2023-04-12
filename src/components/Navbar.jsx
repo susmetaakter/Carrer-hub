@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div>
           <div>
-            <div className="navbar bg-base-100 py-4 px-4 lg:px-8 xl:px-16">
+            <div className="navbar py-4 px-4 lg:px-8 xl:px-16  bg-indigo-50">
   <div className="navbar-start">
     
     <a className=" font-bold text-2xl">JobLanding</a>
@@ -18,7 +18,7 @@ const Navbar = () => {
             <li>
                 <NavLink to='/Statistics' className={({isActive}) => (isActive ? 'text-blue-400' : '' )} >Statistics</NavLink>
             </li>
-            <li> <NavLink to='/applied' className={({isActive}) => (isActive ? 'text-blue-400' : '' )} >Applied Job</NavLink></li>
+            <li> <NavLink to='/appliedjobs' className={({isActive}) => (isActive ? 'text-blue-400' : '' )} >Applied Job</NavLink></li>
             <li> <NavLink to='/blog' className={({isActive}) => (isActive ? 'text-blue-400' : '' )} >Blog</NavLink></li>
         
     </ul>
