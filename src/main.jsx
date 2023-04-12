@@ -20,6 +20,10 @@ const router = createBrowserRouter([
       element: <Header />
      },
      {
+      path: 'id',
+      element: <viewDetails />
+     },
+     {
       path: 'Statistics',
       element: <Statistics />
      },
