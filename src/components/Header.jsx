@@ -54,6 +54,7 @@ const Header = () => {
             <div className='grid gap-6 -mb-1 lg:grid-cols-2 sm:grid-cols-1 py-4 px-4 lg:px-8 xl:px-16'>
               {
                 features.map(feature => <Feature 
+                key = {feature.button.id}  
                 feature = {feature}
                 />)
                 } 
