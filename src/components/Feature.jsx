@@ -15,7 +15,10 @@ const Feature = (props) => {
                     <p className='border px-2 border-blue-400'>{fulltimeOrPartTime}</p>
                   </div>
                   <div className='flex gap-4'>
-                    <p className=''>{location}</p>
+                  <div className='flex'>
+                  <img className='h-4 w-4 mt-1' src="./assets/Icons/Frame-4.png" alt="" srcset="" />
+                   <p className=''>{location}</p>
+                  </div>
                     <p className=''>{salary}</p>
                   </div>
                   <button className=' mr-80 border text-white bg-blue-500 rounded p-2'>View Details</button>
