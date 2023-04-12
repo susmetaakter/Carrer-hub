@@ -21,7 +21,7 @@ const router = createBrowserRouter([
       element: <Header />
      },
      {
-      path: 'feature/button/id',
+      path: 'feature/button/:id',
       element: <JobDetails />
      },
      {
