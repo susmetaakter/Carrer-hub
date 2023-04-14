@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Feature = (props) => {
-    const {companyLogo, jobTitle, companyName, remoteOrOnsite, fulltimeOrPartTime, location, salary, button, id} = props.feature;
+    const {companyLogo, jobTitle, companyName, Jobtype, fulltimeOrPartTime, location, salary, button, id} = props.feature;
     return (
         <div>
         <div className='card bg-slate-50 py-4 px-4 lg:px-8 xl:px-16'>
@@ -12,7 +12,7 @@ const Feature = (props) => {
               <p className='font-bold text-gray-600 mb-2'>{jobTitle}</p>
               <p className='mb-2'>{companyName}</p>
               <div className='flex gap-4 mb-2'>
-                <p className='border rounded border-blue-400 px-2 text-blue-500'>{remoteOrOnsite}</p>
+                <p className='border rounded border-blue-400 px-2 text-blue-500'>{Jobtype}</p>
                 <p className='border rounded px-2 border-blue-400 text-blue-500'>{fulltimeOrPartTime}</p>
               </div>
               <div className='flex gap-4 mb-2'>
