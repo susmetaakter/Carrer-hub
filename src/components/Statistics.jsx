@@ -52,8 +52,8 @@ const Statistics = () => {
         <div>
             <ComposedChart
             layout="vertical"
-            width={500}
-            height={400}
+            width={1200}
+            height={500}
             data={data}
             margin={{
               top: 20,

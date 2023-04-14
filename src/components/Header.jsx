@@ -5,7 +5,10 @@ import Feature from './Feature';
 const Header = () => {
 
   const [categories, setCategories] = useState([]);
-  const [features, setFeatures] = useState([])
+  const [features, setFeatures] = useState([]);
+  const [showMore, setShowMore] = useState(false);
+  const [buttonText, setButtonText] = useState('See All Jobs');
+
 
     useEffect(() => {
         fetch('data1.json')
@@ -14,13 +17,25 @@ const Header = () => {
     }, [])
 
     useEffect(() => {
-        fetch('data2.json')
-        .then(res => res.json())
-        .then(data => {
-          const sliced = data.slice(0, 4);
-          setFeatures(sliced)
-        }) 
-    }, [])
+      fetch('data2.json')
+      .then(res => res.json())
+      
+      .then(data => 
+          // const sliced = data.slice(0, 4);
+          setFeatures(data)
+      )
+  },[])
+
+  const handleClick = () => {
+      setShowMore(true);
+      setButtonText('Show Less');
+    };
+  
+    const handleReset = () => {
+      setShowMore(false);
+      setButtonText('See All Jobs');
+    };
+
 
     return (
         <div>
@@ -54,14 +69,18 @@ const Header = () => {
           <div className='my-container'>
             <div className='grid gap-6 -mb-1 lg:grid-cols-2 sm:grid-cols-1 py-4 px-4 lg:px-8 xl:px-16'>
               {
-                features.map(feature => <Feature 
+                features.slice(0, showMore ? features.length : 4).map(feature => <Feature 
                 key = {feature.id}  
                 feature = {feature}
                 />)
                 } 
             </div>
           </div>
-          <button className='border text-white bg-blue-500 rounded p-2 ms-[580px]'>See All Jobs</button>
+          {features.length > 4 && (
+        <button onClick={showMore ? handleReset : handleClick} className="btn bg-indigo-400 text-white text-xl rounded mt-4 border-none lg:ms-[620px] mb-12">
+        {buttonText} 
+        </button>
+            )}
           </div>
 
         </div>
